@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack_App" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="vaf-ER-ig8" id="gha-qe-VOm"/>
+                <outlet property="profileImg" destination="mgm-6v-Lwp" id="qvt-P0-zHc"/>
+                <outlet property="userEmail" destination="9au-oH-aT6" id="tdN-Pz-3mw"/>
+                <outlet property="userName" destination="rhI-dg-tOH" id="Ot8-1w-ZK3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaf-ER-ig8" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hQ-Bl-JIE">
+                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJC-EW-KSc">
+                            <rect key="frame" x="299" y="8" width="28" height="28"/>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeModalPressed:" destination="-1" eventType="touchUpInside" id="c2X-3l-4pd"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lYU-SM-7qA">
+                            <rect key="frame" x="92" y="55" width="151" height="210.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS5-cr-WYl">
+                                    <rect key="frame" x="12" y="0.0" width="127" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="mgm-6v-Lwp" customClass="CircleImage" customModule="Smack_App" customModuleProvider="target">
+                                    <rect key="frame" x="25.5" y="41.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="VUG-Lh-bKx"/>
+                                        <constraint firstAttribute="height" constant="100" id="cK2-5b-SnY"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhI-dg-tOH">
+                                    <rect key="frame" x="51" y="155.5" width="49.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dan@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9au-oH-aT6">
+                                    <rect key="frame" x="0.0" y="190" width="151" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-oI-hlx">
+                            <rect key="frame" x="133" y="316" width="68" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="vef-Iy-2iL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Q0R-oI-hlx" firstAttribute="centerX" secondItem="8hQ-Bl-JIE" secondAttribute="centerX" id="4xW-hb-kku"/>
+                        <constraint firstAttribute="bottom" secondItem="Q0R-oI-hlx" secondAttribute="bottom" constant="8" id="8u3-An-NRB"/>
+                        <constraint firstItem="lYU-SM-7qA" firstAttribute="centerX" secondItem="8hQ-Bl-JIE" secondAttribute="centerX" id="E8f-48-QM3"/>
+                        <constraint firstItem="EJC-EW-KSc" firstAttribute="top" secondItem="8hQ-Bl-JIE" secondAttribute="top" constant="8" id="J64-xh-E0c"/>
+                        <constraint firstAttribute="height" constant="360" id="Mb3-Nh-qLq"/>
+                        <constraint firstItem="lYU-SM-7qA" firstAttribute="centerY" secondItem="8hQ-Bl-JIE" secondAttribute="centerY" constant="-20" id="WKj-lz-fdQ"/>
+                        <constraint firstAttribute="trailing" secondItem="EJC-EW-KSc" secondAttribute="trailing" constant="8" id="g3k-AA-OCG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8hQ-Bl-JIE" secondAttribute="trailing" constant="20" id="AuJ-8r-Pte"/>
+                <constraint firstItem="8hQ-Bl-JIE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YgC-WL-b3l"/>
+                <constraint firstItem="8hQ-Bl-JIE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="a78-yV-lhb"/>
+                <constraint firstItem="vaf-ER-ig8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="j89-mw-5Mi"/>
+                <constraint firstAttribute="bottom" secondItem="vaf-ER-ig8" secondAttribute="bottom" id="kbg-M8-hGD"/>
+                <constraint firstItem="vaf-ER-ig8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ktK-b8-Xqf"/>
+                <constraint firstAttribute="trailing" secondItem="vaf-ER-ig8" secondAttribute="trailing" id="meb-Ei-H6a"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="profileDefault" width="192" height="192"/>
+    </resources>
+</document>
