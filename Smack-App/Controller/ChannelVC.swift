@@ -51,7 +51,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func setupUserInfo() {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
-            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            userImg.image = UIImage(named: UserDataService.instance.avatarName) ?? UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         } else {
             loginBtn.setTitle("Login", for: .normal)
