@@ -41,8 +41,16 @@ class LoginVC: UIViewController {
                         self.spinner.stopAnimating()
                         self.spinner.isHidden = true
                         self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print("User not found")
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
                     }
                 })
+            } else {
+                print("Login failed")
+                self.spinner.stopAnimating()
+                self.spinner.isHidden = true
             }
         }
         
